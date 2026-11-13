@@ -1,13 +1,11 @@
 // 03 - knock it off the table
 
-// TODO: name, fragile, and an optional owner
 export type Item = {
   name: string;
   fragile: boolean;
   owner?: string;
 };
 
-// TODO: name and items
 export type Table = {
   name: string;
   items: Item[];
@@ -26,7 +24,6 @@ export function knockAllOff(table: Table): Table[] {
   
   
 
-  // 2. Loop, slice, and deep clone at each step
   while (currentItems.length > 0) {
     currentItems = currentItems.slice(0, -1).map(item => ({ ...item }));
     snapshots.push({
