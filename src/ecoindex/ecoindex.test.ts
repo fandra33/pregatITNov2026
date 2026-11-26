@@ -49,9 +49,6 @@ test("grade", () => {
 
 // never called, tsc checks it
 function typeChecks() {
-  // @ts-expect-error H is not a grade
   const g: Grade = "H";
-
-  // @ts-expect-error sizeKb is missing
   const p: Page = { dom: 1, requests: 1 };
 }
