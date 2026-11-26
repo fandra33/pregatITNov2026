@@ -22,7 +22,8 @@
     "test": "node --test",
     "check": "tsc --noEmit",
     "ci": "npm run check && npm test",
-    "lint": "eslint"
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
   },
   "devDependencies": {
     "@types/node": "^24.19.2",
