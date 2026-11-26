@@ -39,7 +39,7 @@ export function move(pos: Position, dir: Dir, steps = 1): Position {
 }
 
 export function run(start: Position, dirs: Dir[]): Position[] {
-  let positions: Position[] = [start];
+  const positions: Position[] = [start];
   for (const dir of dirs) {
     start = move(start, dir);
     positions.push(start);
@@ -69,7 +69,7 @@ export function farthest(start: Position, dirs: Dir[]): Position {
 }
 
 export function where(pos: Position, name?: string) {
-  if (name == undefined) {
+  if (name === undefined) {
     return `the cat is at (${pos[0]}, ${pos[1]})`;
   }
   return `${name} is at (${pos[0]}, ${pos[1]})`;
